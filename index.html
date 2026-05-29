@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>❤️ Bizning Xotiralar ❤️</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        padding: 30px 0;
+      }
+
+      h1 {
+        color: white;
+        font-size: 3rem;
+        margin-bottom: 20px;
+        animation: pulse 2s infinite;
+      }
+
+      .subtitle {
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        transition: 0.5s;
+        animation: fadeUp 1s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-10px) scale(1.03);
+      }
+
+      .card img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+      }
+
+      .card p {
+        color: white;
+        padding: 15px;
+        font-size: 18px;
+      }
+
+      .music-btn {
+        margin: 30px auto;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 50px;
+        background: white;
+        color: #ff4d88;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .music-btn:hover {
+        transform: scale(1.1);
+      }
+
+      .love-letter {
+        margin-top: 50px;
+        color: white;
+        font-size: 22px;
+        line-height: 1.8;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 25px;
+        border-radius: 20px;
+      }
+
+      .heart {
+        position: fixed;
+        color: red;
+        animation: float 6s linear infinite;
+        pointer-events: none;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 9999;
+        animation: fadeIn 0.4s;
+      }
+
+      .modal-content {
+        width: 90%;
+        max-width: 900px;
+        margin: 50px auto;
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .modal-content img {
+        width: 50%;
+        min-width: 300px;
+        object-fit: cover;
+      }
+
+      .modalText {
+        flex: 1;
+        padding: 30px;
+        font-size: 24px;
+        color: #ff4d88;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        line-height: 1.8;
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 50px;
+        color: white;
+        cursor: pointer;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes float {
+        from {
+          transform: translateY(100vh);
+          opacity: 1;
+        }
+        to {
+          transform: translateY(-100px);
+          opacity: 0;
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <div class="modal-content">
+      <img id="modalImg" />
+      <div class="modalText" id="modalText"></div>
+    </div>
+  </div>
+
+  <body>
+    <div class="container">
+      <h1>❤️ Seni Juda Yaxshi Ko'raman ❤️</h1>
+
+      <p class="subtitle">
+        Har bir surat ortida unutilmas xotiralar yashaydi...
+      </p>
+
+      <button
+        class="music-btn"
+        onclick="document.getElementById('music').play()"
+      >
+        🎵 Musiqani Bosish
+      </button>
+
+      <div class="gallery">
+        <div class="card">
+          <img
+            src="imgs/rasm1.png"
+            onclick="openModal(this.src,'❤️ Sen bilan tanishganim hayotimdagi eng chiroyli voqealardan biri bo‘lgan.')"
+          />
+          <p>❤️ Sen bilan har bir lahza qadrli</p>
+        </div>
+        <div class="card">
+          <img
+            src="imgs/rasm2.png"
+            onclick="openModal(this.src,'🌹 Har safar seni ko‘rganimda yuzimda tabassum paydo bo‘ladi.')"
+          />
+          <p>🌹 Eng chiroyli xotiralar sen bilan</p>
+        </div>
+        <div class="card">
+          <img
+            src="imgs/rasm3.png"
+            onclick="openModal(this.src,'✨ Sening kulishing hatto eng oddiy kunlarni ham go‘zal qiladi.')"
+          />
+          <p>✨ Tabassuming kunimni yoritadi</p>
+        </div>
+        <div class="card">
+          <img
+            src="imgs/rasm4.png"
+            onclick="openModal(this.src,'💖 Kelajakda ham shu kabi go‘zal xotiralarimiz ko‘p bo‘lishini tilayman.')"
+          />
+          <p>💖 Hayotimdagi eng go'zal inson</p>
+        </div>
+        <div class="card">
+          <img
+            src="imgs/rasm5.png"
+            onclick="openModal(this.src,'💕 Ba’zi insonlar hayotni o‘zgartiradi. Sen ana shunday insonsan.')"
+          />
+          <p>💕 Sen bilan hammasi boshqacha</p>
+        </div>
+        <div class="card">
+          <img
+            src="imgs/rasm6.png"
+            onclick="openModal(this.src,'💘 Birga tushgan har bir surat men uchun qadrli xotira bo‘lib qoladi.')"
+          />
+          <p>💘 Bu xotiralar men uchun bebaho</p>
+        </div>
+      </div>
+
+      <div class="love-letter">
+        ❤️ Bu kichik sovg'a sen uchun. <br /><br />
+        Har safar bu rasmlarga qaraganimda kulgularimiz, birga o'tgan
+        lahzalarimiz va eng yaxshi xotiralarimiz yodimga tushadi. 🌹
+      </div>
+    </div>
+
+    <audio id="music" loop>
+      <source src="music/music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script>
+      function createHeart() {
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+        heart.innerHTML = "❤️";
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = 20 + Math.random() * 30 + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 6000);
+      }
+      function openModal(img, text) {
+        document.getElementById("modal").style.display = "block";
+        document.getElementById("modalImg").src = img;
+        document.getElementById("modalText").innerHTML = text;
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+
+      setInterval(createHeart, 250);
+    </script>
+  </body>
+</html>
