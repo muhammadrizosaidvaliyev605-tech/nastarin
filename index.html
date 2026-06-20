@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="uz">
   <head>
@@ -16,8 +14,10 @@
 
       body {
         font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
         overflow-x: hidden;
+        min-height: 100vh;
+        margin: 0;
       }
 
       .container {
@@ -47,17 +47,18 @@
       }
 
       .card {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
         border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 25px rgba(0, 180, 255, 0.25);
         transition: 0.5s;
         animation: fadeUp 1s ease;
       }
 
       .card:hover {
         transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 0 30px rgba(0, 200, 255, 0.5);
       }
 
       .card img {
@@ -77,15 +78,16 @@
         padding: 15px 30px;
         border: none;
         border-radius: 50px;
-        background: white;
-        color: #ff4d88;
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+        color: white;
         font-size: 18px;
         cursor: pointer;
         transition: 0.3s;
+        box-shadow: 0 0 20px rgba(0, 180, 255, 0.4);
       }
 
       .music-btn:hover {
-        transform: scale(1.1);
+        transform: scale(1.08);
       }
 
       .love-letter {
@@ -93,9 +95,10 @@
         color: white;
         font-size: 22px;
         line-height: 1.8;
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.08);
         padding: 25px;
         border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 180, 255, 0.2);
       }
 
       .heart {
@@ -109,20 +112,20 @@
         display: none;
         position: fixed;
         inset: 0;
-        background: rgba(0, 0, 0, 0.85);
+        background: rgba(5, 20, 40, 0.92);
         z-index: 9999;
-        animation: fadeIn 0.4s;
       }
 
       .modal-content {
         width: 90%;
         max-width: 900px;
         margin: 50px auto;
-        background: white;
+        background: #16222a;
         border-radius: 20px;
         overflow: hidden;
         display: flex;
         flex-wrap: wrap;
+        box-shadow: 0 0 30px rgba(0, 180, 255, 0.4);
       }
 
       .modal-content img {
@@ -135,7 +138,7 @@
         flex: 1;
         padding: 30px;
         font-size: 24px;
-        color: #ff4d88;
+        color: #7fdfff;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -148,7 +151,7 @@
         top: 20px;
         right: 30px;
         font-size: 50px;
-        color: white;
+        color: #7fdfff;
         cursor: pointer;
       }
 
@@ -207,7 +210,7 @@
 
   <body>
     <div class="container">
-      <h1>❤️ Seni Juda Yaxshi Ko'raman ❤️</h1>
+      <h1>💙 Siz Borligiz Bilan Hammasini O‘zgartirdingiz 💙</h1>
 
       <p class="subtitle">
         Har bir surat ortida unutilmas xotiralar yashaydi...
@@ -226,49 +229,65 @@
             src="./imgs/ram.jpg"
             onclick="openModal(this.src,'❤️ Sen bilan tanishganim hayotimdagi eng chiroyli voqealardan biri bo‘lgan.')"
           />
-          <p>❤️ Sen bilan har bir lahza qadrli</p>
+          <p>
+            Sizni yoqtirib qolishi rejalashtirmadim lekn yuregim sizni tanladi🫀
+          </p>
         </div>
         <div class="card">
           <img
             src="./imgs/rasm1.jpg"
             onclick="openModal(this.src,'🌹 Har safar seni ko‘rganimda yuzimda tabassum paydo bo‘ladi.')"
           />
-          <p>🌹 Eng chiroyli xotiralar sen bilan</p>
+          <p>
+            Hayotimdigi eng gõzal tasodifsiz Sizni uchratganimdan keyin baxt
+            nimaligini chundim🤍
+          </p>
         </div>
         <div class="card">
           <img
             src="./imgs/rasm2.jpg"
             onclick="openModal(this.src,'✨ Sening kulishing hatto eng oddiy kunlarni ham go‘zal qiladi.')"
           />
-          <p>✨ Tabassuming kunimni yoritadi</p>
+          <p>Sizni mehriz mani aqldan ozdiradi🥹</p>
         </div>
         <div class="card">
           <img
             src="./imgs/rasm3.jpg"
             onclick="openModal(this.src,'💖 Kelajakda ham shu kabi go‘zal xotiralarimiz ko‘p bo‘lishini tilayman.')"
           />
-          <p>💖 Hayotimdagi eng go'zal inson</p>
+          <p>Siz bilan xar bir lahza qadrli🫂</p>
         </div>
         <div class="card">
           <img
-            src="./imgs/rasm4.jpg"
+            src="./imgs/rasm7.png"
             onclick="openModal(this.src,'💕 Ba’zi insonlar hayotni o‘zgartiradi. Sen ana shunday insonsan.')"
           />
-          <p>💕 Sen bilan hammasi boshqacha</p>
+          <p>
+            Sizi sevaman diyish hali erta bõlishi mumkin, lekn sizi yõqotishi xohlamasligm aniq🙂
+          </p>
         </div>
         <div class="card">
           <img
             src="./imgs/rasm5.jpg"
             onclick="openModal(this.src,'💘 Birga tushgan har bir surat men uchun qadrli xotira bo‘lib qoladi.')"
           />
-          <p>💘 Bu xotiralar men uchun bebaho</p>
+          <p>
+            Siz man uchun oddiy insonmassiz Man uchun haqiqiy ideal insonsiz💋
+          </p>
         </div>
+        <!-- <div class="card">
+          <img
+            src="./imgs/rasm4.jpg"
+            onclick="openModal(this.src,'💘 Birga tushgan har bir surat men uchun qadrli xotira bo‘lib qoladi.')"
+          />
+          <p>Sani mehrin mani aqldan ozdiradi🥹</p>
+        </div> -->
       </div>
 
       <div class="love-letter">
-        ❤️ Bu kichik sovg'a sen uchun. <br /><br />
-        Har safar bu rasmlarga qaraganimda kulgularimiz, birga o'tgan
-        lahzalarimiz va eng yaxshi xotiralarimiz yodimga tushadi. 🌹
+        ❤️ Bu kichik sovg'a siz uchun. <br /><br />
+        Har safar rasmlaga qaraganimda ichimda iliq his uyğonadi, uni sõz bilan
+        chuntirish qiyin❤️‍🔥
       </div>
     </div>
 
@@ -281,7 +300,7 @@
         const heart = document.createElement("div");
 
         heart.className = "heart";
-        heart.innerHTML = "❤️";
+        heart.innerHTML = "💙";
 
         heart.style.left = Math.random() * 100 + "vw";
         heart.style.fontSize = 20 + Math.random() * 30 + "px";
